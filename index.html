@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Falcon UI Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <aside class="sidebar open">
+    <div class="logo">🦅 Falcon UI</div>
+    <nav>
+      <ul>
+        <li><a href="#" class="active" data-page="home">Home</a></li>
+        <li><a href="#" data-page="endpoints">Endpoints</a></li>
+        <li><a href="#" data-page="bugfree">Bug Free</a></li>
+        <li><a href="#" data-page="settings">Settings</a></li>
+        <li><a href="#" data-page="about">About</a></li>
+      </ul>
+    </nav>
+    <button id="themeToggle" aria-label="Toggle Dark Mode">🌙</button>
+  </aside>
+
+  <main class="content">
+    <header class="topbar">
+      <button id="menuBtn" class="ham" aria-label="Toggle Menu">☰</button>
+      <h1 id="pageTitle">Home</h1>
+    </header>
+
+    <section id="homeSection" class="page">      
+      <p>Welcome to <strong>Falcon UI Dashboard</strong>.</p>
+    </section>
+    <section id="endpointsSection" class="page hidden">
+      <h2>Test AI Hydromind Endpoint</h2>
+      <label for="textInput">Message</label>
+      <input type="text" id="textInput" placeholder="Enter text…" />
+      <button id="sendBtn">Send</button>
+      <h3>Response</h3>
+      <pre id="output" class="output">// Response will appear here</pre>
+    </section>
+    <section id="bugfreeSection" class="page hidden">
+      <h2>Func Bug Free</h2>
+      <ul id="bugList" class="bug-list"></ul>
+    </section>
+    <section id="settingsSection" class="page hidden"><h2>Settings</h2></section>
+    <section id="aboutSection" class="page hidden"><h2>About</h2></section>
+  </main>
+
+  <div id="toastContainer" class="toast-container"></div>
+  <div id="overlay" class="overlay"></div>
+
+  <script src="func.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
